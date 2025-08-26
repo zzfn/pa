@@ -50,7 +50,7 @@ def run_transcription(audio_dir="audio", transcripts_dir="transcripts"):
     print(f"正在加载模型并转录 {audio_path}...")
 
     try:
-        model = whisper.load_model("large")
+        model = whisper.load_model("turbo")
         result = model.transcribe(audio_path, verbose=True, language="zh")
         transcript = result["text"]
 
