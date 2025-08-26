@@ -16,17 +16,34 @@ def run_transcription(audio_dir="audio", transcripts_dir="transcripts"):
         print(f"目录 '{audio_dir}' 不存在。")
         return
 
+    # Create a list of choices with status
+    choices_with_status = []
+    for filename in audio_files:
+        transcript_filename = os.path.splitext(filename)[0] + ".txt"
+        transcript_path = os.path.join(transcripts_dir, transcript_filename)
+        status = "✓ 已转录" if os.path.exists(transcript_path) else "✗ 未转录"
+        choices_with_status.append(f"{filename} ({status})")
+
     # Ask user to choose a file
     questions = [
-        inquirer.List('selected_file',
+        inquirer.List('selected_choice',
                         message="请选择要转录的音频文件",
-                        choices=audio_files,
+                        choices=choices_with_status,
                     ),
     ]
     answers = inquirer.prompt(questions)
     if not answers:
         return
-    selected_file = answers['selected_file']
+        
+    # Extract the original filename from the choice
+    selected_choice = answers['selected_choice']
+    selected_file = selected_choice.split(" (")[0]
+    
+    # Determine output path and check for existence for overwrite confirmation
+    transcript_filename = os.path.splitext(selected_file)[0] + ".txt"
+    transcript_path = os.path.join(transcripts_dir, transcript_filename)
+
+    
 
     # Transcribe the audio file
     audio_path = os.path.join(audio_dir, selected_file)
@@ -38,9 +55,6 @@ def run_transcription(audio_dir="audio", transcripts_dir="transcripts"):
         transcript = result["text"]
 
         # Save the transcript
-        transcript_filename = os.path.splitext(selected_file)[0] + ".txt"
-        transcript_path = os.path.join(transcripts_dir, transcript_filename)
-
         with open(transcript_path, "w", encoding="utf-8") as f:
             f.write(transcript)
 

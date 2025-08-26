@@ -19,18 +19,36 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
         print(f"目录 '{transcripts_dir}' 不存在。")
         return
 
+    # Create a list of choices with status
+    choices_with_status = []
+    for filename in transcript_files:
+        # Check for summary file with .md extension
+        base_filename = os.path.splitext(filename)[0]
+        summary_filename_md = base_filename + ".md"
+        summary_path = os.path.join(summaries_dir, summary_filename_md)
+        status = "✓ 已总结" if os.path.exists(summary_path) else "✗ 未总结"
+        choices_with_status.append(f"{filename} ({status})")
+
     # Ask user to choose a file
     questions = [
-        inquirer.List('selected_file',
+        inquirer.List('selected_choice',
                         message="请选择要总结的转录文件",
-                        choices=transcript_files,
+                        choices=choices_with_status,
                     ),
     ]
     answers = inquirer.prompt(questions)
     if not answers:
         return
-    selected_file = answers['selected_file']
     
+    # Extract the original filename from the choice
+    selected_choice = answers['selected_choice']
+    selected_file = selected_choice.split(" (")[0]
+    
+    # Determine output path with .md extension
+    base_filename = os.path.splitext(selected_file)[0]
+    summary_filename_md = base_filename + ".md"
+    summary_path = os.path.join(summaries_dir, summary_filename_md)
+
     transcript_path = os.path.join(transcripts_dir, selected_file)
 
     print(f"正在准备AI总结...")
@@ -74,9 +92,6 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
         print("-----------------")
 
         # Save the summary
-        summary_filename = os.path.splitext(selected_file)[0] + "_summary.txt"
-        summary_path = os.path.join(summaries_dir, summary_filename)
-
         with open(summary_path, "w", encoding="utf-8") as f:
             f.write(summary)
 
@@ -86,6 +101,9 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
         print(f"错误: 文件未找到: {transcript_path}")
     except Exception as e:
         print(f"错误: AI总结过程中发生严重错误: {e}")
+
+
+
 
 if __name__ == '__main__':
     # To allow running this file directly for testing
