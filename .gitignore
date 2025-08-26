@@ -1,3 +1,4 @@
 /.idea/
 .env
 /audio/
+/node_modules/
