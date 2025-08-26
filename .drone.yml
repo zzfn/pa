@@ -49,4 +49,4 @@ steps:
 #      target: /etc/caddy/zeus
 #      source: ./dist
       target: /etc/caddy/${DRONE_REPO_NAME}
-      source: ./dist/index.html
+      source: ./doc_build/
