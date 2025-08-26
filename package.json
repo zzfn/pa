@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "rspress build",
-    "dev": "rspress dev",
-    "preview": "rspress preview"
+    "build": "web/node_modules/.bin/rspress build",
+    "dev": "web/node_modules/.bin/rspress dev",
+    "preview": "web/node_modules/.bin/rspress preview"
   },
   "dependencies": {
     "rspress": "^1.40.2"

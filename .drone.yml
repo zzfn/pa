@@ -1,0 +1,52 @@
+kind: pipeline
+type: docker
+name: ci/cd
+clone:
+  disable: true
+
+steps:
+  - name: clone
+    image: nmtz/drone-github-clone
+    settings:
+      SSH_KEY:
+        from_secret: ssh_key
+  - name: build
+    image: node:lts-alpine
+    depends_on: [clone]
+    commands:
+      - corepack enable
+      - corepack prepare pnpm@latest-9 --activate
+      - pnpm config set store-dir .pnpm-store
+      - pnpm -v
+      - pnpm install
+      - pnpm run build
+      - pnpm prune --prod
+  - name: oss
+    image: nmtz/drone-aliyun-oss
+    depends_on: [build]
+    settings:
+      endpoint:
+        from_secret: endpoint
+      ACCESS_KEY_ID:
+        from_secret: accessKeyID
+      ACCESS_KEY_SECRET:
+        from_secret: accessKeySecret
+      BUCKET_NAME:
+        from_secret: bucketName
+      target: price_action
+      source: ./dist
+  - name: deploy
+    image: appleboy/drone-scp
+    depends_on: [build]
+    settings:
+      host:
+        from_secret: caddy_host
+      port: 22
+      username:
+        from_secret: caddy_username
+      key:
+        from_secret: caddy_ssh_key
+#      target: /etc/caddy/zeus
+#      source: ./dist
+      target: /etc/caddy/${DRONE_REPO_NAME}
+      source: ./dist/index.html
