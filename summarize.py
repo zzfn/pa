@@ -33,21 +33,24 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
     
     transcript_path = os.path.join(transcripts_dir, selected_file)
 
-    print(f"正在读取文件 {transcript_path} 并进行AI总结...")
+    print(f"正在准备AI总结...")
 
     try:
+        print(f"[1/5] 读取转录文件: {transcript_path}")
         with open(transcript_path, "r", encoding="utf-8") as f:
             transcript_text = f.read()
+        print("[2/5] 文件读取完毕。")
 
-        # Initialize OpenAI client for OpenRouter
+        print("[3/5] 初始化AI客户端...")
         client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=os.getenv("OPENROUTER_API_KEY"),
         )
+        print("[4/5] 客户端初始化完毕。正在向AI发送请求，请稍候...")
 
         # Create chat completion
         response = client.chat.completions.create(
-            model="mistralai/mistral-7b-instruct",
+            model="google/gemini-2.5-flash",
             messages=[
                 {
                     "role": "system",
@@ -63,6 +66,7 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
             ],
         )
         
+        print("[5/5] AI响应成功！正在处理和保存总结...")
         summary = response.choices[0].message.content
 
         print("\n--- AI 总结 ---")
@@ -79,9 +83,9 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
         print(f"总结已保存到 {summary_path}")
 
     except FileNotFoundError:
-        print(f"文件未找到: {transcript_path}")
+        print(f"错误: 文件未找到: {transcript_path}")
     except Exception as e:
-        print(f"AI总结过程中发生错误: {e}")
+        print(f"错误: AI总结过程中发生严重错误: {e}")
 
 if __name__ == '__main__':
     # To allow running this file directly for testing
