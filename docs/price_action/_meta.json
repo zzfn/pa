@@ -8,7 +8,7 @@
       "collapsed": false
     },
     { "name": "6-Stop_Order", "label": "Stop Order" },
-      {
+    {
       "type": "dir",
       "name": "signal",
       "label": "Signals & Entries",
