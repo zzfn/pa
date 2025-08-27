@@ -1,12 +1,12 @@
 [
-    { "name": "index", "label": "前言：大雄的决心" },
-    { "name": "2-真突破", "label": "道具：任意门" },
-    { "name": "3-第二段陷阱", "label": "警惕：谎话800" },
-    { "name": "10-信号K线 & 入场(1)", "label": "时机：预知日记本" },
-    { "name": "15-剥头皮", "label": "技巧：美食家桌布" },
-    { "name": "19-楔形反转", "label": "形态：进入蜗牛屋" },
-    { "name": "20-楔形反转", "label": "形态：进入蜗牛屋(续)" },
-    { "name": "29-蜡烛图", "label": "基础：放大缩小灯" },
-    { "name": "30-市场周期的4个阶段", "label": "环境：时光包袱皮" },
-    { "name": "31-回调&数K线", "label": "技巧：竹蜻蜓" }
+    { "name": "index", "label": "Preface" },
+    { "name": "2-真突破", "label": "Breakouts" },
+    { "name": "3-第二段陷阱", "label": "Traps" },
+    { "name": "10-信号K线 & 入场(1)", "label": "Signals & Entries" },
+    { "name": "15-剥头皮", "label": "Scalping" },
+    { "name": "19-楔形反转", "label": "Wedges" },
+    { "name": "20-楔形反转", "label": "Wedges (Cont.)" },
+    { "name": "29-蜡烛图", "label": "Bar-by-Bar Analysis" },
+    { "name": "30-市场周期的4个阶段", "label": "Market Cycles" },
+    { "name": "31-回调&数K线", "label": "Pullbacks" }
 ]
