@@ -7,6 +7,7 @@
       "collapsible": true,
       "collapsed": false
     },
+    { "name": "6-Stop_Order", "label": "Stop Order" },
     { "name": "10-信号K线 & 入场(1)", "label": "Signals & Entries" },
     { "name": "15-剥头皮", "label": "Scalping" },
     { "name": "19-楔形反转", "label": "Wedges" },
