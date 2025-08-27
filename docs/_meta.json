@@ -1,16 +1,12 @@
 [
   {
-    "text": "Price Action",
+    "text": "神奇道具",
     "link": "/price_action/",
     "activeMatch": "/price_action/"
   },
   {
-    "text": "Hello world",
+    "text": "使用说明",
     "link": "/hello/",
     "activeMatch": "/hello/"
-  },
-  {
-    "text": "API",
-    "link": "https://rspress.dev/api/index.html"
   }
 ]
