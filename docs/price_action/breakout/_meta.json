@@ -1,3 +1,14 @@
 [
-    { "name": "2-真突破", "label": "Breakout" }
+  {
+    "name": "1-假突破",
+    "label": "False Breakout"
+  },
+  {
+    "name": "2-真突破",
+    "label": "True Breakout"
+  },
+  {
+    "name": "3-第二段陷阱",
+    "label": "Second Leg Trap"
+  }
 ]
