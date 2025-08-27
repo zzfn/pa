@@ -11,7 +11,7 @@ hero:
       link: /price_action/
     - theme: alt
       text: 学习说明书
-      link: /hello
+      link: /about
   image:
     src: /rspress-icon.png
     alt: Logo
