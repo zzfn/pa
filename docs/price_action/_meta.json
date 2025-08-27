@@ -1,6 +1,12 @@
 [
     { "name": "index", "label": "Preface" },
-    { "name": "2-真突破", "label": "Breakouts" },
+    {
+      "type": "dir",
+      "name": "breakout",
+      "label": "Breakout",
+      "collapsible": true,
+      "collapsed": false
+    },
     { "name": "3-第二段陷阱", "label": "Traps" },
     { "name": "10-信号K线 & 入场(1)", "label": "Signals & Entries" },
     { "name": "15-剥头皮", "label": "Scalping" },
