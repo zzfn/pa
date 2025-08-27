@@ -80,6 +80,8 @@ def run_summarization(transcripts_dir="transcripts", summaries_dir="summaries"):
 
 唯一需要遵守的特殊规则是：如果文中出现了值得解释的专业术语，请在笔记的末尾创建一个名为【专业术语解释】的独立部分，并对其进行简要说明。
 
+请直接从笔记的主体内容开始，不要添加任何引言、开场白或总结性的段落。
+
 你的目标是产出一份能真正帮助交易者学习和吸收视频精华的、高质量的文档。请务必使用简体中文进行总结。""",
                 },
                 {"role": "user", "content": transcript_text},
