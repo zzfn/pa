@@ -2,36 +2,36 @@
 pageType: home
 
 hero:
-  name: My Site
-  text: A cool website!
-  tagline: This is the tagline
+  name: 价格行为学
+  text: 交易的艺术与科学
+  tagline: 深入理解市场结构，掌握裸K交易的核心。
   actions:
     - theme: brand
-      text: Quick Start
-      link: /guide/
+      text: 开始学习
+      link: /price_action/
     - theme: alt
-      text: GitHub
-      link: https://github.com/web-infra-dev/rspress
+      text: 关于本站
+      link: /hello
   image:
     src: /rspress-icon.png
     alt: Logo
 features:
-  - title: Blazing fast build speed
-    details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
-    icon: 🏃🏻‍♀️
-  - title: Support for MDX content writing
-    details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
-    icon: 📦
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
-    icon: 🎨
-  - title: Simpler I18n solution
-    details: With the built-in I18n solution, you can easily provide multi-language support for documents or components.
-    icon: 🌍
-  - title: Static site generation
-    details: In production, it automatically builds into static HTML files, which can be easily deployed anywhere.
-    icon: 🌈
-  - title: Providing multiple custom capabilities
-    details: Through its extension mechanism, you can easily extend theme UI and build process.
-    icon: 🔥
+  - title: 系统化学习
+    details: 从K线基础到市场周期，全面覆盖价格行为学的核心知识点。
+    icon: 📚
+  - title: Al Brooks 核心理论
+    details: 深入学习Al Brooks的理论精髓，包括趋势、通道、突破、回调等。
+    icon: 📈
+  - title: 专题课程
+    details: 针对楔形反转、第二段陷阱、剥头皮交易等高级主题进行专项训练。
+    icon: 🎯
+  - title: 裸K交易
+    details: 抛开一切指标，专注于价格本身，学习最纯粹的交易方法。
+    icon: 📊
+  - title: 交易心理
+    details: 了解市场情绪和交易者心理，建立稳固的交易纪律。
+    icon: 🧠
+  - title: 视频课程精讲
+    details: 将视频课程内容整理为文字稿和摘要，方便快速复习和查阅。
+    icon: 🎬
 ---
