@@ -2,6 +2,13 @@
     { "name": "index", "label": "前言" },
     {
       "type": "dir",
+      "name": "guide",
+      "label": "学习指南",
+      "collapsible": true,
+      "collapsed": false
+    },
+    {
+      "type": "dir",
       "name": "breakout",
       "label": "突破",
       "collapsible": true,

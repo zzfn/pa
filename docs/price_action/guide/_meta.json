@@ -1,1 +1,5 @@
-["index"]
+[
+    { "name": "14-Al_Brooks介绍", "label": "Al Brooks介绍" },
+    { "name": "16-复盘训练", "label": "复盘训练" },
+    { "name": "17-TradingView回放功能", "label": "TradingView回放功能" }
+]
