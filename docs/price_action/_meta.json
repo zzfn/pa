@@ -7,7 +7,20 @@
       "collapsible": true,
       "collapsed": false
     },
-    { "name": "6-Stop_Order", "label": "止损单" },
+    {
+      "type": "dir",
+      "name": "orders",
+      "label": "订单类型",
+      "collapsible": true,
+      "collapsed": false
+    },
+    {
+      "type": "dir",
+      "name": "target",
+      "label": "止盈目标",
+      "collapsible": true,
+      "collapsed": false
+    },
     {
       "type": "dir",
       "name": "signal",
@@ -15,7 +28,21 @@
       "collapsible": true,
       "collapsed": false
     },
+    {
+      "type": "dir",
+      "name": "gap",
+      "label": "缺口",
+      "collapsible": true,
+      "collapsed": false
+    },
     { "name": "15-剥头皮", "label": "剥头皮" },
+    {
+      "type": "dir",
+      "name": "pullback",
+      "label": "回调",
+      "collapsible": true,
+      "collapsed": false
+    },
     {
       "type": "dir",
       "name": "wedge",
@@ -24,8 +51,19 @@
       "collapsed": false
     },
     { "name": "21-抛物线反转", "label": "抛物线反转" },
-    { "name": "22-早盘的重要性&概率统计", "label": "早盘的重要性&概率统计" },
-    { "name": "29-蜡烛图", "label": "K线分析" },
-    { "name": "30-市场周期的4个阶段", "label": "市场周期" },
-    { "name": "31-回调&数K线", "label": "回调与数K线" }
+    {
+      "type": "dir",
+      "name": "morning",
+      "label": "早盘策略",
+      "collapsible": true,
+      "collapsed": false
+    },
+    {
+      "type": "dir",
+      "name": "market_cycle",
+      "label": "市场周期",
+      "collapsible": true,
+      "collapsed": false
+    },
+    { "name": "29-蜡烛图", "label": "K线分析" }
 ]

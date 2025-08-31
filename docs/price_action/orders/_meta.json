@@ -1,0 +1,4 @@
+[
+    { "name": "6-Stop_Order", "label": "止损单" },
+    { "name": "7-Limit_Order", "label": "限价单" }
+]

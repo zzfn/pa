@@ -10,5 +10,13 @@
   {
     "name": "3-第二段陷阱",
     "label": "第二段陷阱"
+  },
+  {
+    "name": "4-突破回测",
+    "label": "突破回测"
+  },
+  {
+    "name": "5-Surprise_Bars",
+    "label": "Surprise Bars"
   }
 ]
