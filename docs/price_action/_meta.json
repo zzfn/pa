@@ -1,26 +1,31 @@
 [
-    { "name": "index", "label": "Preface" },
+    { "name": "index", "label": "前言" },
     {
       "type": "dir",
       "name": "breakout",
-      "label": "Breakout",
+      "label": "突破",
       "collapsible": true,
       "collapsed": false
     },
-    { "name": "6-Stop_Order", "label": "Stop Order" },
+    { "name": "6-Stop_Order", "label": "止损单" },
     {
       "type": "dir",
       "name": "signal",
-      "label": "Signals & Entries",
+      "label": "信号与入场",
       "collapsible": true,
       "collapsed": false
     },
-    { "name": "15-剥头皮", "label": "Scalping" },
-    { "name": "19-楔形反转", "label": "Wedges" },
-    { "name": "20-楔形反转", "label": "Wedges (Cont.)" },
+    { "name": "15-剥头皮", "label": "剥头皮" },
+    {
+      "type": "dir",
+      "name": "wedge",
+      "label": "楔形反转",
+      "collapsible": true,
+      "collapsed": false
+    },
     { "name": "21-抛物线反转", "label": "抛物线反转" },
     { "name": "22-早盘的重要性&概率统计", "label": "早盘的重要性&概率统计" },
-    { "name": "29-蜡烛图", "label": "Bar-by-Bar Analysis" },
-    { "name": "30-市场周期的4个阶段", "label": "Market Cycles" },
-    { "name": "31-回调&数K线", "label": "Pullbacks" }
+    { "name": "29-蜡烛图", "label": "K线分析" },
+    { "name": "30-市场周期的4个阶段", "label": "市场周期" },
+    { "name": "31-回调&数K线", "label": "回调与数K线" }
 ]
