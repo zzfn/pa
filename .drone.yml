@@ -14,6 +14,7 @@ steps:
     image: node:lts-alpine
     depends_on: [clone]
     commands:
+      - npm install -g corepack@latest
       - corepack enable
       - corepack prepare pnpm@latest-9 --activate
       - pnpm config set store-dir .pnpm-store
